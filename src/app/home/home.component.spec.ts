@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThumbnailTableComponent } from './thumbnail-table.component';
+import { HomeComponent } from './home.component';
 
-describe('ThumbnailTableComponent', () => {
-  let component: ThumbnailTableComponent;
-  let fixture: ComponentFixture<ThumbnailTableComponent>;
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ThumbnailTableComponent]
+      imports: [HomeComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ThumbnailTableComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

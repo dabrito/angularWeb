@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h2>Lista de Publicaciones</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Contenido</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (post of posts; track post.id) {
+        <tr>
+          <td>{{ post.id }}</td>
+          <td>{{ post.title }}</td>
+          <td>{{ post.body }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
