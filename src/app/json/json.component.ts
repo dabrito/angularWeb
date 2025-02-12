@@ -12,12 +12,20 @@ import { Post } from '../interfaz/post';
   templateUrl: './json.component.html',
   styleUrls: ['./json.component.css']
 })
-export class JsonComponent{
+export class JsonComponent {
   title = 'JsonComponent';
   posts: Post[] = [];
-  constructor( private recursosService: RecursosService ){
+  selectedPost: Post | null = null;
+
+  constructor(private recursosService: RecursosService) {
     recursosService.getPosts().subscribe(respuesta => {
-      this.posts = respuesta as Array<Post>;
+      this.posts = respuesta as Post[];
+    });
+  }
+
+  getPostDetails(id: number) {
+    this.recursosService.getPostById(id).subscribe(respuesta => {
+      this.selectedPost = respuesta as Post;
     });
   }
 }
